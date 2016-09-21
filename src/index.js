@@ -57,7 +57,6 @@ const routes = {
     { path: 'grid4', component: LocalStorageLayout },
     { path: 'chartIQ', component: ChartIQFirst },
 
-
   ]
 };
 

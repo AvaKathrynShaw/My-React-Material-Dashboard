@@ -7,8 +7,6 @@ var _ = require('lodash');
 // Load the FP build for immutable auto-curried iteratee-first data-last methods.
 //var fp = require('lodash/fp');
 
-
-
 require('./demo.css');
 require('./flexbox.css');
 
