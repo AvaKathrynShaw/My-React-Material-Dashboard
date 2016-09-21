@@ -1,0 +1,113 @@
+/* Base Application Styles */
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeeee;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: black;
+  background-color: black;
+}
+
+.page-content {
+  padding: 0px 0px;
+}
+
+.page-title {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.resizable {
+    overflow: scroll;
+    resize: both;
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.no-overflow{
+
+  overflow-y:hidden;
+
+}
+
+
+.box-layout{
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  resize: both;
+}
+
+.hidden {
+  display:none;
+}
+
+td{
+  padding: 0px;
+  text-align: center;
+}
+
+ tr:hover {background-color: #00bfff;}
+
+/*
+tr:nth-child(even){background-color: #242342;}
+tr:nth-child(odd){background-color: #484765;}
+tr:hover {background-color: #ddd;}
+
+table {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: #ff9900;
+    background-color: #455A64;
+    font-size: small;
+    display: table-header-group;
+}
+
+
+ tr:hover {background-color: #00bfff;}
+
+th.table {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: #242342;
+    color: white;
+    ;
+}
+
+.scrollable{
+  overflow: scroll;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+#content{
+    height:100%;
+    width:100%;
+    background-color:red;
+    padding:0;
+    margin:0;
+    position:absolute;
+}
+#hoverbar{
+    height:100px;
+    width:100px;
+    background-color:black;
+    position:absolute;
+    bottom:0;
+    margin:0;
+    padding:0;
+    visibility:hidden;
+}
+#content:hover > #hoverbar{
+    visibility:visible;
+}*/

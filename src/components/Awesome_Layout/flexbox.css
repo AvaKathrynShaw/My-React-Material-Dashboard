@@ -1,0 +1,299 @@
+/* =============================================================================
+  OUTER CONTAINERS
+============================================================================= */
+.container {
+  margin: 0 auto;
+  padding: 0 12px;
+  max-width: 960px;
+}
+
+@media all and (min-width: 480px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+@media all and (min-width: 720px) {
+  .container {
+    padding: 0 48px;
+  }
+}/* =============================================================================
+  COMPONENT COMMONS
+============================================================================= */
+.component__section {
+  margin: 0 24px 48px;
+}
+
+.component__section:last-child {
+  margin-bottom: 0;
+}
+
+/*Demo Use*/
+.component__sub-title {
+  margin-bottom: 12px;
+  color: #818181;
+  font-size: 22px;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* =============================================================================
+  BOX SIZING
+============================================================================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =============================================================================
+  FLEXBOX GRID (COLORS CAN BE CHANGED)
+============================================================================= */
+.grid {
+  border: solid 1px #e7e7e7;
+}
+
+.grid__row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.grid__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 12px;
+  border: solid 1px #e7e7e7;
+}
+
+@media all and (min-width: 480px) {
+  .grid__row--sm {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media all and (min-width: 720px) {
+  .grid__row--md {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media all and (min-width: 960px) {
+  .grid__row--lg {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+/* =============================================================================
+  THE FAMOUS FLEXIBLE HOLY GRAIL LAYOUT
+  NOTE, PADDING MAY NEED TO BE MADE SMALLER TO FIT MORE CONTENT...
+============================================================================= */
+.holy-grail {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.holy-grail__header,
+.holy-grail__footer {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 10%;
+      -ms-flex: 0 0 10%;
+          flex: 0 0 10%;
+  padding: 12px;
+  background-color: #484765;
+  text-align: center;
+}
+
+.holy-grail__header h1,
+.holy-grail__footer small {
+  color: #FFFFFF;
+}
+
+.holy-grail__body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.holy-grail__sidebar {
+  padding: 12px;
+  background-color: #484765;
+}
+
+.holy-grail__sidebar--left {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.holy-grail__sidebar--right {
+  -webkit-box-ordinal-group: 4;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3;
+}
+
+.holy-grail__content {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2;
+  padding: 12px;
+    background-color: #fff
+}
+
+@media all and (min-width: 720px) {
+  .holy-grail__body {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .holy-grail__sidebar {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 180px;
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
+  }
+
+  .holy-grail__content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+@media all and (min-width: 960px) {
+  .holy-grail__sidebar {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 240px;
+        -ms-flex: 0 0 240px;
+            flex: 0 0 240px;
+  }
+}
+/* =============================================================================
+  VERTICAL ALIGNMENT - MEDIA
+============================================================================= */
+.post {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 24px auto;
+  max-width: 960px;
+}
+
+.post:last-child {
+  margin-bottom: 0;
+}
+
+.post_media {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 96px;
+      -ms-flex: 0 0 96px;
+          flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  background-color: #e7e7e7;
+}
+
+.post_description {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-left: 24px;
+  padding: 12px;
+  border: solid 1px #e7e7e7;
+}
+
+.post_title {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+
+.post_exerpt {
+  margin: 0;
+}
+
+/* =============================================================================
+  VERTICAL AND HORIZONTAL CENTERING
+============================================================================= */
+.banner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  height: 180px;
+  background-color: #e7e7e7;
+}
+
+.banner__content {
+  text-align: center;
+}
+
+.banner__title,
+.banner__sub {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+}
+
+@media all and (min-width: 480px) {
+  .banner {
+    height: 240px;
+  }
+}
+@media all and (min-width: 768px) {
+  .banner {
+    height: 360px;
+  }
+}
+@media all and (min-width: 960px) {
+  .banner {
+    height: 480px;
+  }
+}

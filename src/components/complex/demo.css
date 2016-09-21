@@ -1,0 +1,16 @@
+.third-tr{
+  font-weight: bold;
+  background-color: ;
+}
+
+table{
+  font-size: small;
+
+}
+
+td{
+  padding: 0px;
+  text-align: right;
+}
+
+ tr:hover {background-color: #00bfff;}
