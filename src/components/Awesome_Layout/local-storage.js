@@ -4,6 +4,10 @@ var PureRenderMixin = require('react/lib/ReactComponentWithPureRenderMixin');
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ReactGridLayout = require('react-grid-layout');
 ReactGridLayout = WidthProvider(ReactGridLayout);
+import SimpleLineChart from '../recharts/chart1'
+import SvgIconExampleSimple from '../common/SVGIcon'
+import IconMenuExampleSimple from '../common/top-menu'
+
 
 const originalLayout = getFromLS('layout') || [];
 
@@ -21,7 +25,10 @@ var LocalStorageLayout = React.createClass({
     return {
       className: "layout",
       cols: 12,
-      rowHeight: 30
+      rowHeight: 30,
+      autoSize: true,
+      margin: [5, 5],
+      containerPadding: [0,0],
     };
   },
 
@@ -57,11 +64,25 @@ var LocalStorageLayout = React.createClass({
   };
   var i = el.add ? '+' : el.i;
   return (
-    <div key={i} data-grid={el}>
+    <div key={i} data-grid={el} className='grid-layout container bluebar'>
       {el.add ?
         <span className="add text" onClick={this.onAddItem} title="You can add an item by clicking here, too.">Add +</span>
       : <span className="text">{i}</span>}
       <span className="remove" style={removeStyle} onClick={this.onRemoveItem.bind(this, i)}>x</span>
+
+        <div>
+          <div className="holy-grail">
+            <div className="holy-grail__body">
+              <div className="holy-grail__content">
+              <section className="component__section">
+
+      <SimpleLineChart />
+
+              </section>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   );
 },
@@ -95,6 +116,7 @@ onAddItem() {
           <button onClick={this.onAddItem}>Add Item</button>
         <ReactGridLayout
             ref="rgl"
+            className="grid-layout react-grid-layout"
             {...this.props}
             layout={this.state.layout}
             onLayoutChange={this.onLayoutChange}>
