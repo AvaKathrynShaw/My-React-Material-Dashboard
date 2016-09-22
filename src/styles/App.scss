@@ -6,6 +6,7 @@ body {
   background-color: #eeeeee;
   padding-left: 25px;
   padding-right: 25px;
+  font-family: 'Khula', sans-serif;
 }
 
 .nav-link {
@@ -54,6 +55,12 @@ td{
 }
 
  tr:hover {background-color: #00bfff;}
+
+ .compact{
+   padding: 5px !important;
+   margin: 5px !important;
+ }
+
 
 /*
 tr:nth-child(even){background-color: #242342;}

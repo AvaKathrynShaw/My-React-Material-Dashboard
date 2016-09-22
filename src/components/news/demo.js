@@ -4,8 +4,7 @@ import CardExampleControlled from './ExpandCards';
 class SpeedDeskDemo extends React.Component {
   render() {
     return (
-          <div>
-          <h1>Speed Desk</h1>
+          <div className='compact'>
             <CardExampleControlled />
               <CardExampleControlled />
                 <CardExampleControlled />

@@ -1,11 +1,6 @@
 /* =============================================================================
   OUTER CONTAINERS
 ============================================================================= */
-.compactflex{
-  padding: 5px !important;
-  margin: 5px !important;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 12px;
@@ -25,10 +20,7 @@
   COMPONENT COMMONS
 ============================================================================= */
 .component__section {
-
-  color: #818181;
-  padding: 5px !important;
-  margin: 5px !important;
+  margin: 0 24px 48px;
 }
 
 .component__section:last-child {
@@ -38,7 +30,7 @@
 /*Demo Use*/
 .component__sub-title {
   margin-bottom: 12px;
-  color: #818181;
+  color: #CFD8DC;
   font-size: 22px;
   font-weight: 300;
   text-align: center;
@@ -131,7 +123,7 @@
       -ms-flex: 0 0 10%;
           flex: 0 0 10%;
   padding: 12px;
-  background-color: #484765;
+  background-color: #2B343A;
   text-align: center;
 }
 
@@ -150,12 +142,16 @@
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-                overflow: scroll;
+}
+
+.compactflex{
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .holy-grail__sidebar {
   padding: 12px;
-  background-color: #484765;
+  background-color: #2B343A;
 }
 
 .holy-grail__sidebar--left {
@@ -178,7 +174,7 @@
       -ms-flex-order: 2;
           order: 2;
   padding: 12px;
-    background-color: #fff
+    background-color: #2B343A
 }
 
 @media all and (min-width: 720px) {
@@ -306,3 +302,104 @@
     height: 480px;
   }
 }
+
+
+
+/* =============================================================================
+  DEMO CONTENT (COLORS & CONTAINERS
+  TO SHOW FLEX LAYOUT)
+============================================================================= */
+
+/* =============================================================================
+  HTML & BODY
+============================================================================= */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: #a7abaf;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =============================================================================
+  HEADINGS
+============================================================================= */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #a7abaf;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* =============================================================================
+  LINKS
+============================================================================= */
+a {
+  color: #f07850;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c93f11;
+}
+
+/* =============================================================================
+  TEXT STUFFS
+============================================================================= */
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+/* =============================================================================
+  DEMO HEADER (Just some containers)
+============================================================================= */
+.demo-header {
+  margin: 0;
+  padding: 0;
+}
+/* =============================================================================
+  DEMO FOOTER (just some empty space)
+============================================================================= */
+.demo-footer {
+  padding: 12px 0;
+  text-align: center;
+}
+
+@media all and (min-width: 480px) {
+  .demo-footer {
+    padding: 24px 0;
+  }
+}
+@media all and (min-width: 720px) {
+  .demo-footer {
+    padding: 48px 0;
+  }
+}
+
+/* =============================================================================
+            COLOR PALETTE
+============================================================================= */
+
+
+.dark-background{background: #131c25}
+.module-color {background: #2B343A}
+.heading-text-color{color:#CFD8DC}
+.body-text-color{color: #a7abaf}
+.better-accent-color {background: #f07850;}
+.divider-color   { border-color: #BDBDBD; }

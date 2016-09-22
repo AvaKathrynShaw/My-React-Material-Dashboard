@@ -3,9 +3,11 @@ var PureRenderMixin = require('react/lib/ReactComponentWithPureRenderMixin');
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ResponsiveReactGridLayout = require('react-grid-layout').Responsive;
 ResponsiveReactGridLayout = WidthProvider(ResponsiveReactGridLayout);
-import SimpleLineChart from '../recharts/chart1'
-import SvgIconExampleSimple from '../common/SVGIcon'
-import IconMenuExampleSimple from '../common/top-menu'
+import SimpleLineChart from '../recharts/chart1';
+import SvgIconExampleSimple from '../common/SVGIcon';
+import IconMenuExampleSimple from '../common/top-menu';
+import SpeedDeskDemo from '../news/demo'
+import AreaChart from '../recharts/area_chart'
 
 
 const originalLayouts = getFromLS('layouts') || {};
@@ -84,11 +86,11 @@ var FifthGirdLayout = React.createClass({
            <span className="remove" style={removeStyle}>x</span>
 
            <div>
-              <div className="holy-grail">
+              <div className="holy-grail ">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
 
-                  <section className="component__section">
+                  <section className="component__section ">
 
                     <p>Content Here</p>
 
@@ -110,15 +112,74 @@ var FifthGirdLayout = React.createClass({
            <div key="Speed Desk"
            className='grid-layout container bluebar'
            data-grid={{w: 2, h: 3, x: 2, y: 0}}>
-                      <span className="text">2</span>
+
+
+           <span className="text" style={removeStyle1}> <h4> Speed Desk </h4> </span>
+
+           <span> <IconMenuExampleSimple /> </span>
+
+           <span className="remove" style={removeStyle}>x</span>
+
+           <div>
+              <div className="holy-grail">
+                <div className="holy-grail__body">
+                  <div className="holy-grail__content">
+
+                  <section className="component__section">
+
+                    <SpeedDeskDemo />
+
+                  </section>
+
+                  </div>
+                </div>
+             </div>
+           </div>
+
+
+
            </div>
 
 
 
            <div key="Chart"
            className='grid-layout container bluebar'
-           data-grid={{w: 2, h: 3, x: 4, y: 0}}>
-                      <span className="text">3</span>
+           data-grid={{w: 5, h: 10, x: 4, y: 0}}>
+
+
+
+           <span className="text" style={removeStyle1}> <h4> Chart </h4> </span>
+
+           <span> <IconMenuExampleSimple /> </span>
+
+           <span className="remove" style={removeStyle}>x</span>
+
+           <div>
+              <div className="holy-grail">
+                <div className="holy-grail__body">
+                  <div className="holy-grail__content">
+
+                  <section className="component__section">
+
+                    <SimpleLineChart />
+                    <AreaChart />
+
+                  </section>
+
+                  <div className="holy-grail__sidebar holy-grail__sidebar--left">
+                  <h4>Left Flexbox</h4>
+                  </div>
+
+                  </div>
+                </div>
+             </div>
+           </div>
+
+
+
+
+
+
             </div>
 
 
@@ -126,7 +187,37 @@ var FifthGirdLayout = React.createClass({
            <div key="Ticker Comparison"
            className='grid-layout container bluebar'
            data-grid={{w: 2, h: 3, x: 6, y: 0}}>
-                      <span className="text">4</span>
+
+
+
+
+           <span className="text" style={removeStyle1}> <h4> Ticker Comparison </h4> </span>
+
+           <span> <IconMenuExampleSimple /> </span>
+
+           <span className="remove" style={removeStyle}>x</span>
+
+           <div>
+              <div className="holy-grail">
+                <div className="holy-grail__body">
+                  <div className="holy-grail__content">
+
+                  <section className="component__section">
+
+                    <p>Content Here</p>
+
+                  </section>
+
+                  </div>
+                </div>
+             </div>
+           </div>
+
+
+
+
+
+
             </div>
 
 
@@ -135,7 +226,33 @@ var FifthGirdLayout = React.createClass({
            <div key="Chat"
            className='grid-layout container bluebar'
            data-grid={{w: 2, h: 3, x: 8, y: 0}}>
-                    <span className="text">5</span>
+
+
+           <span className="text" style={removeStyle1}> <h4> Chat </h4> </span>
+
+           <span> <IconMenuExampleSimple /> </span>
+
+           <span className="remove" style={removeStyle}>x</span>
+
+           <div>
+              <div className="holy-grail">
+                <div className="holy-grail__body">
+                  <div className="holy-grail__content">
+
+                  <section className="component__section">
+
+                    <p>Content Here</p>
+
+                  </section>
+
+                  </div>
+                </div>
+             </div>
+           </div>
+
+
+
+
            </div>
 
 
@@ -149,22 +266,29 @@ var FifthGirdLayout = React.createClass({
    }
  });
 
-function getFromLS(key) {
-  let ls = {};
-  if (global.localStorage) {
-    try {
-      ls = JSON.parse(global.localStorage.getItem('rgl-7')) || {};
-    } catch(e) { console.log("local storage not working")}
-  }
-  return ls[key];
-}
 
-function saveToLS(key, value) {
-  if (global.localStorage) {
-    global.localStorage.setItem('rgl-7', JSON.stringify({
-      [key]: value
-    }));
-  }
-}
+ function getFromLS(key) {
+   let ls = {};
+   if (global.localStorage) {
+     try {
+       ls = JSON.parse(global.localStorage.getItem('rgl-8')) || {};
+     } catch(e) {console.log('Failed to write to storeage');}
+   }
+   return ls[key];
+ }
+
+
+
+
+ function saveToLS(key, value) {
+   if (global.localStorage) {
+     global.localStorage.setItem('rgl-8', JSON.stringify({
+       [key]: value
+     }));
+   }
+ }
+
+
+
 
 module.exports = FifthGirdLayout;

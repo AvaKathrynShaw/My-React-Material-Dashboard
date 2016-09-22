@@ -140,6 +140,9 @@ class Layout extends React.Component {
           <Link to="/news2"  className="nav-link">
             <MenuItem> Material UI Grid News </MenuItem>
           </Link>
+          <Link to="/news3"  className="nav-link">
+            <MenuItem> CSS Only Flexbox News </MenuItem>
+          </Link>
 
           <Divider />
           <h3>Charts</h3>
@@ -156,11 +159,17 @@ class Layout extends React.Component {
             <MenuItem> Radial Chart </MenuItem>
           </Link>
 
+          <Link to="/chart4"  className="nav-link">
+            <MenuItem> Area Chart </MenuItem>
+          </Link>
+
           <Link to="/chartIQ"  className="nav-link">
-            <MenuItem> Chart IQ </MenuItem>
+            <MenuItem> Chart IQ (not working) </MenuItem>
           </Link>
 
         </Drawer>
+
+
         <div className="page-content">
           {this.props.children}
         </div>
