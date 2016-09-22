@@ -167,6 +167,13 @@ class Layout extends React.Component {
             <MenuItem> Chart IQ (not working) </MenuItem>
           </Link>
 
+          <Divider />
+          <h3>Scroll Containers</h3>
+
+          <Link to="/scroll-container"  className="nav-link">
+            <MenuItem> Scroll Container </MenuItem>
+          </Link>
+
         </Drawer>
 
 

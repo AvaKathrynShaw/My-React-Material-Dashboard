@@ -8,6 +8,8 @@ import SvgIconExampleSimple from '../common/SVGIcon';
 import IconMenuExampleSimple from '../common/top-menu';
 import SpeedDeskDemo from '../news/demo'
 import AreaChart from '../recharts/area_chart'
+import { Scrollbars } from 'react-custom-scrollbars';
+
 
 
 const originalLayouts = getFromLS('layouts') || {};
@@ -124,13 +126,13 @@ var FifthGirdLayout = React.createClass({
               <div className="holy-grail">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
-
+                  <Scrollbars style={{ width: 1000, height: 1000 }}>
                   <section className="component__section">
 
                     <SpeedDeskDemo />
 
                   </section>
-
+                  </Scrollbars>
                   </div>
                 </div>
              </div>

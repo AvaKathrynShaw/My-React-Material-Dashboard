@@ -28,6 +28,7 @@ import LocalStorageLayout from './components/Awesome_Layout/local-storage'
 import FifthGirdLayout from './components/Awesome_Layout/fifth_grid'
 import AreaChart from './components/recharts/area_chart'
 import FlexBoxNews from './components/grid_news/flex_box_news'
+import ScrollContainer from './components/ScrollBox/react-scroll-box'
 
 
 injectTapEventPlugin();
@@ -62,6 +63,8 @@ const routes = {
     { path: 'grid5', component: FifthGirdLayout },
     { path: 'chart4', component: AreaChart },
     { path: 'news3', component: FlexBoxNews },
+    { path: 'scroll-container', component: ScrollContainer },
+
 
 
   ]

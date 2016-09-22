@@ -59,13 +59,14 @@
   cursor: se-resize;
 }
 .grid-layout{
-  
+
   padding: 0px !important;
   margin: 0px !important;
   overflow: hidden;
+  
 }
 .scrollable{
-  overflow-y: hide;
+  overflow-y: hidden;
 }
 .bluebar{
   background-color: #484765;
