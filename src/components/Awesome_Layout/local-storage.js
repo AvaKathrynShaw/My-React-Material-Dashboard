@@ -1,4 +1,3 @@
-'use strict';
 var React = require('react');
 var PureRenderMixin = require('react/lib/ReactComponentWithPureRenderMixin');
 var WidthProvider = require('react-grid-layout').WidthProvider;
@@ -35,9 +34,11 @@ var LocalStorageLayout = React.createClass({
   getInitialState() {
     return {
       layout: JSON.parse(JSON.stringify(originalLayout)),
+
       items: [0, 1, 2, 3, 4].map(function(i, key, list) {
-  return {i: i.toString(), x: i * 2, y: 0, w: 2, h: 2, add: i === (list.length - 1).toString()};
-    }),
+  return {i: i.toString(), x: i * 2, y: 0, w: 3, h: 3, minW:  3, maxW: 6, minH:  3,
+         maxH: 6, add: i === (list.length - 1).toString()};
+}),
     newCounter: 0
     };
   },
@@ -50,8 +51,9 @@ var LocalStorageLayout = React.createClass({
 
   onLayoutChange(layout) {
     /*eslint no-console: 0*/
-    saveToLS('layout', layout);
+
     this.setState({layout});
+    saveToLS('layout', layout);
   //  this.props.onLayoutChange(layout); // updates status display
   },
 
@@ -76,7 +78,7 @@ var LocalStorageLayout = React.createClass({
               <div className="holy-grail__content">
               <section className="component__section">
 
-      <SimpleLineChart />
+      <SimpleLineChart /> <p>Hey im here too</p>
 
               </section>
               </div>
@@ -97,6 +99,7 @@ onAddItem() {
   console.log('adding', 'n' + this.state.newCounter);
   this.setState({
     // Add a new item. It must have a unique key!
+
     items: this.state.items.concat({
       i: 'n' + this.state.newCounter,
       x: this.state.items.length * 2 % (this.state.cols || 12),
@@ -107,6 +110,7 @@ onAddItem() {
     // Increment the counter to ensure key is always unique.
     newCounter: this.state.newCounter + 1
   });
+
 },
 
   render() {
@@ -120,10 +124,7 @@ onAddItem() {
             {...this.props}
             layout={this.state.layout}
             onLayoutChange={this.onLayoutChange}>
-
               {_.map(this.state.items, this.createElement)}
-
-
         </ReactGridLayout>
       </div>
     );
@@ -135,7 +136,7 @@ function getFromLS(key) {
   if (global.localStorage) {
     try {
       ls = JSON.parse(global.localStorage.getItem('rgl-7')) || {};
-    } catch(e) {/*Ignore*/}
+    } catch(e) { console.log("local storage not working")}
   }
   return ls[key];
 }

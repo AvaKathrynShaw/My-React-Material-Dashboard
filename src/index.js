@@ -25,6 +25,7 @@ import TinyLineChart from './components/recharts/tiny_line_line_chart'
 import SimpleRadialChart from './components/recharts/radial_chart'
 import ChartIQFirst from './components/small_chartIQ/my_first_chartIQ'
 import LocalStorageLayout from './components/Awesome_Layout/local-storage'
+import FifthGirdLayout from './components/Awesome_Layout/fifth_grid'
 
 
 injectTapEventPlugin();
@@ -56,6 +57,7 @@ const routes = {
     { path: 'chart3', component: SimpleRadialChart },
     { path: 'grid4', component: LocalStorageLayout },
     { path: 'chartIQ', component: ChartIQFirst },
+    { path: 'grid5', component: FifthGirdLayout },
 
   ]
 };

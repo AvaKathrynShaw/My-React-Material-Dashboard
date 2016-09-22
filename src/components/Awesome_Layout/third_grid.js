@@ -72,7 +72,7 @@ var AddRemoveLayout = React.createClass({
 
         <div>
         <div className="holy-grail">
-      <div className="holy-grail__body">
+        <div className="holy-grail__body">
         <div className="holy-grail__content">
 
           <section className="component__section">
