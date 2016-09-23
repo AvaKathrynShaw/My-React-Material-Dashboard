@@ -29,7 +29,7 @@ import FifthGirdLayout from './components/Awesome_Layout/fifth_grid'
 import AreaChart from './components/recharts/area_chart'
 import FlexBoxNews from './components/grid_news/flex_box_news'
 import ScrollContainer from './components/ScrollBox/react-scroll-box'
-
+import Quickstart from './components/chartIQ/react_components/quickstart'
 
 injectTapEventPlugin();
 
@@ -59,11 +59,12 @@ const routes = {
     { path: 'chart2', component: TinyLineChart },
     { path: 'chart3', component: SimpleRadialChart },
     { path: 'grid4', component: LocalStorageLayout },
-    { path: 'chartIQ', component: ChartIQFirst },
+    { path: 'chartIQ', component: Quickstart },
     { path: 'grid5', component: FifthGirdLayout },
     { path: 'chart4', component: AreaChart },
     { path: 'news3', component: FlexBoxNews },
     { path: 'scroll-container', component: ScrollContainer },
+
 
 
 

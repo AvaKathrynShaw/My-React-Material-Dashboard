@@ -127,7 +127,7 @@ var FifthGirdLayout = React.createClass({
               <div className="holy-grail">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
-                  <Scrollbars style={{ width: 1000, height: 1000 }}>
+                  <Scrollbars style={{ height: 300 }}>
                   <section className="component__section">
 
                     <SpeedDeskDemo />
@@ -161,7 +161,7 @@ var FifthGirdLayout = React.createClass({
               <div className="holy-grail">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
-    
+
                   <Scrollbars
                   style={{ height: 600 }}>
                   <section className="component__section">
