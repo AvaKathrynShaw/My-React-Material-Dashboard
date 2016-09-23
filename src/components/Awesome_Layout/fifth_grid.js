@@ -10,6 +10,7 @@ import SpeedDeskDemo from '../news/demo'
 import AreaChart from '../recharts/area_chart'
 import { Scrollbars } from 'react-custom-scrollbars';
 
+import ResizeScrollBox from '../Scroll_Containers/resize_scrollbox'
 
 
 const originalLayouts = getFromLS('layouts') || {};
@@ -161,12 +162,15 @@ var FifthGirdLayout = React.createClass({
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
 
+                  <Scrollbars
+                  style={{ height: 600 }}>
                   <section className="component__section">
 
                     <SimpleLineChart />
                     <AreaChart />
 
                   </section>
+                  </Scrollbars>
 
                   <div className="holy-grail__sidebar holy-grail__sidebar--left">
                   <h4>Left Flexbox</h4>
@@ -214,6 +218,7 @@ var FifthGirdLayout = React.createClass({
                 </div>
              </div>
            </div>
+
 
 
 

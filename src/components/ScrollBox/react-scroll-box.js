@@ -1,17 +1,67 @@
 // ES2015
 import React from 'react'
-import Dimensions from 'react-dimensions'
+import Measure from 'react-measure';
 
-class MyComponent extends React.Component {
-  render(){ return (
-    <div
-      containerWidth={this.props.containerWidth}
-      containerHeight={this.props.containerHeight}
-    >
-    <p>Im some content</p>
-    </div>
-  )
-}
+const { Component, Children, PropTypes } = React
+
+class Block extends Component {
+  render() {
+    return (
+      <div style={{ display: 'flex', width: 200 }}>
+        <div style={{ flex: '1 1 200px' }}>
+          <div style={{ overflow: 'hidden',  backgroundColor: 'red' }}>
+            <div style={{ width: 300, height: 150 }}/>
+          </div>
+        </div>
+      </div>
+    )
+  }
 }
 
-export default Dimensions()(MyComponent) // Enhanced component
+class AnimatingChild extends Component {
+  render() {
+    const { animate } = this.props
+    return (
+      <Measure>
+        {dimensions =>
+          <div className={`square ${animate ? 'animate' : ''}`}>
+            <strong>
+              {animate ? 'Click to stop animating' : 'Click to animate'}
+            </strong>
+            {Object.keys(dimensions).map((dimension, i) =>
+              <div key={i}>{dimension}: {dimensions[dimension]}</div>
+            )}
+          </div>
+        }
+      </Measure>
+    )
+  }
+}
+
+export default class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      animate: false
+    }
+  }
+
+  render() {
+    const { animate } = this.state
+    return (
+      <div>
+        <div onClick={() => this.setState({ animate: !animate })}>
+          <AnimatingChild animate={animate}/>
+        </div>
+        <Measure
+          accurate
+          onMeasure={dimensions => {
+            console.log(dimensions)
+          }}
+        >
+          <Block/>
+        </Measure>
+      </div>
+    )
+  }
+}

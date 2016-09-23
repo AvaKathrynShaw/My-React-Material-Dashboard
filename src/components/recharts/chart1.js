@@ -1,6 +1,8 @@
 import React from 'react';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'Recharts';
 
+import Dimensions from 'react-dimensions'
+
 require('./demo.css');
 
 
@@ -17,10 +19,12 @@ const data = [
 
 
 class SimpleLineChart extends React.Component {
+
+
   render() {
     return (
 
-      <LineChart width={300} height={150} data={data}
+      <LineChart width={this.props.containerWidth} height={this.props.containerWidth/2} data={data}
         margin={{top: 5, right: 30, left: 20, bottom: 5}}>
         <XAxis dataKey="name"/>
         <YAxis/>
@@ -35,4 +39,6 @@ class SimpleLineChart extends React.Component {
   }
 }
 
-export default SimpleLineChart;
+const EnhancedComponent = Dimensions({elementResize: true})(SimpleLineChart)
+
+export default EnhancedComponent;

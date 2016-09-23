@@ -1,8 +1,11 @@
 import React from 'react';
+import ReactDom from 'react-dom'
 
 require('./demo.css');
 
 import {AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip} from 'Recharts';
+
+import Dimensions from 'react-dimensions'
 
 
 const data = [
@@ -15,12 +18,18 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 1209},
 ];
 
+/*var propTypes = {
+containerWidth: PropTypes.number.isRequired,
+containerHeight: PropTypes.number.isRequired
+};*/
+
 class AreaChartDemo extends React.Component {
+
   render () {
   	return (
     	<div>
       	<h4>A demo of synchronized AreaCharts</h4>
-        <AreaChart width={300} height={150} data={data} syncId="anyId"
+        <AreaChart width={this.props.containerWidth} height={this.props.containerWidth/2} data={data} syncId="anyId"
               margin={{top: 10, right: 30, left: 0, bottom: 0}}>
           <XAxis dataKey="name"/>
           <YAxis/>
@@ -29,7 +38,7 @@ class AreaChartDemo extends React.Component {
           <Area type='monotone' dataKey='uv' stroke='#8884d8' fill='#8884d8' />
         </AreaChart>
         <p>Maybe some other content</p>
-        <AreaChart width={300} height={150} data={data} syncId="anyId"
+        <AreaChart width={this.props.containerWidth} height={this.props.containerWidth/2} data={data} syncId="anyId"
               margin={{top: 10, right: 30, left: 0, bottom: 0}}>
           <XAxis dataKey="name"/>
           <YAxis/>
@@ -42,4 +51,6 @@ class AreaChartDemo extends React.Component {
   }
 }
 
-export default AreaChartDemo;
+const EnhancedComponent = Dimensions({elementResize: true})(AreaChartDemo)
+
+export default EnhancedComponent;
