@@ -1,6 +1,7 @@
 require('./demo.css');
 import React from 'react';
 import App from './app';
+import Dimensions from 'react-dimensions'
 
 class ComplexDemo extends React.Component {
   render() {

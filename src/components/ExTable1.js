@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Reactable from 'reactable';
 
-
+import Dimensions from 'react-dimensions'
 
 const tableData = [
   {
