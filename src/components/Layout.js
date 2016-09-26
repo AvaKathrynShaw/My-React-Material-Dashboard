@@ -129,6 +129,9 @@ class Layout extends React.Component {
           <Link to="/table3"  className="nav-link">
             <MenuItem> Bootstrap Table Complex </MenuItem>
           </Link>
+          <Link to="/griddle1"  className="nav-link">
+            <MenuItem> Griddle Table </MenuItem>
+          </Link>
           <Divider />
 
 

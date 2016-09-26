@@ -73,12 +73,12 @@ var FifthGirdLayout = React.createClass({
              {...this.props}
              layouts={this.state.layouts}
              onLayoutChange={this.onLayoutChange}
-             className='grid-layout'>
+             className='grid-layout compact'>
 
 
 
            <div key="Quote Grid"
-           className='grid-layout container bluebar'
+           className='grid-layout bluebar compact'
            data-grid={{w: 2, h: 3, x: 0, y: 0}}>
 
 
@@ -89,7 +89,7 @@ var FifthGirdLayout = React.createClass({
            <span className="remove" style={removeStyle}>x</span>
 
            <div>
-              <div className="holy-grail compact">
+              <div className="holy-grail">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
 
@@ -113,7 +113,7 @@ var FifthGirdLayout = React.createClass({
 
 
            <div key="Speed Desk"
-           className='grid-layout container bluebar'
+           className='grid-layout container bluebar compact'
            data-grid={{w: 2, h: 3, x: 2, y: 0}}>
 
 
@@ -146,7 +146,7 @@ var FifthGirdLayout = React.createClass({
 
 
            <div key="Chart"
-           className='grid-layout container bluebar'
+           className='grid-layout container bluebar compact'
            data-grid={{w: 5, h: 10, x: 4, y: 0}}>
 
 
@@ -163,6 +163,8 @@ var FifthGirdLayout = React.createClass({
                   <div className="holy-grail__content">
 
                   <Scrollbars
+
+
                   style={{ height: 600 }}>
                   <section className="component__section">
 
@@ -191,7 +193,7 @@ var FifthGirdLayout = React.createClass({
 
 
            <div key="Ticker Comparison"
-           className='grid-layout container bluebar'
+           className='grid-layout container bluebar compact'
            data-grid={{w: 2, h: 3, x: 6, y: 0}}>
 
 
@@ -231,7 +233,7 @@ var FifthGirdLayout = React.createClass({
 
 
            <div key="Chat"
-           className='grid-layout container bluebar'
+           className='grid-layout container bluebar compact'
            data-grid={{w: 2, h: 3, x: 8, y: 0}}>
 
 
@@ -294,8 +296,6 @@ var FifthGirdLayout = React.createClass({
      }));
    }
  }
-
-
 
 
 module.exports = FifthGirdLayout;

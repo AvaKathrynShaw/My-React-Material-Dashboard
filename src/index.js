@@ -30,6 +30,7 @@ import AreaChart from './components/recharts/area_chart'
 import FlexBoxNews from './components/grid_news/flex_box_news'
 import ScrollContainer from './components/ScrollBox/react-scroll-box'
 import Quickstart from './components/chartIQ/react_components/quickstart'
+import FirstGriddle from './components/griddle/first_griddle'
 
 injectTapEventPlugin();
 
@@ -64,6 +65,8 @@ const routes = {
     { path: 'chart4', component: AreaChart },
     { path: 'news3', component: FlexBoxNews },
     { path: 'scroll-container', component: ScrollContainer },
+    { path: 'griddle1', component: FirstGriddle },
+
 
 
 
