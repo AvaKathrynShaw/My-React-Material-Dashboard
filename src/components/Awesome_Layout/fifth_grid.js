@@ -9,6 +9,7 @@ import IconMenuExampleSimple from '../common/top-menu';
 import SpeedDeskDemo from '../news/demo'
 import AreaChart from '../recharts/area_chart'
 import { Scrollbars } from 'react-custom-scrollbars';
+import FirstGriddle from '../griddle/first_griddle'
 
 import ResizeScrollBox from '../Scroll_Containers/resize_scrollbox'
 
@@ -92,13 +93,13 @@ var FifthGirdLayout = React.createClass({
               <div className="holy-grail">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
-
+                  <Scrollbars style={{ height: 600 }}>
                   <section className="component__section ">
 
-                    <p>Content Here</p>
+                    <FirstGriddle />
 
                   </section>
-
+                  </Scrollbars>
                   </div>
                 </div>
              </div>

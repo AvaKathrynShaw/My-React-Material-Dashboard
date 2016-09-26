@@ -1,6 +1,9 @@
 var React = require('react');
 var Griddle = require('griddle-react');
 
+import Dimensions from 'react-dimensions'
+
+require('./demo.css');
 
   const tableData = [
     {
@@ -849,12 +852,14 @@ var Griddle = require('griddle-react');
 class FirstGriddle extends React.Component {
   render() {
     return (
-      <div>
-        <Griddle tableClassName="table" showFilter={true}
+      <div className='customGriddle'>
+        <Griddle tableClassName="table" showFilter={true} useGriddleStyles={false}
         showSettings={true}results={tableData} columns={["Sym", "Desc", "Most Rec", "Chg" , "%Chg" , "Bid" , "Ask", "Vol", "MRT" , "Open", "High", "Low", "Prev", "Cap", "PTB", "P/E", "AVG VOL", "Short Interest" ]}/>
       </div>
     );
   }
 }
 
-export default FirstGriddle;
+const EnhancedComponent = Dimensions({elementResize: true})(FirstGriddle)
+
+export default EnhancedComponent;
