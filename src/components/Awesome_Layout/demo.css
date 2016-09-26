@@ -63,13 +63,15 @@
   padding: 0px !important;
   margin: 0px !important;
   overflow: hidden;
-  
 }
+
 .scrollable{
   overflow-y: hidden;
 }
+
 .bluebar{
   background-color: #484765;
   color: #fff;
 }
+
 .material-icons.md-18 { font-size: 18px; }

@@ -848,143 +848,14 @@ require('./demo.css');
     },
   ];
 
-const columnMeta = [
-{
-  "columnName": "Sym",
-  "order": 1,
-  "locked": true,
-  "visible": true,
-},
-{
-  "columnName": "Desc",
-  "order": 2,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "Most Rec",
-  "order": 3,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "Chg",
-  "order": 4,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "%Chg",
-  "order": 5,
-  "locked": false,
-  "visible": true
-},
-{
-  "columnName": "Bid",
-  "order":  6,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Ask",
-  "order":  7,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Vol",
-  "order":  8,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "MRT",
-  "order":  9,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Open",
-  "order":  10,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "High",
-  "order":  11,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Low",
-  "order":  12,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Prev",
-  "order":  13,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Cap",
-  "order":  14,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "PTB",
-  "order":  15,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "P/E",
-  "order":  16,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "AVG VOL",
-  "order":  17,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-{
-  "columnName": "Short Interest",
-  "order":  18,
-  "locked": false,
-  "visible": true,
-  "sortable": false
-},
-  ]
-
-
 class FirstGriddle extends React.Component {
   render() {
     return (
-      <div className="griddle">
-        <Griddle tableClassName="table" showFilter={true} useGriddleStyles={false}
-        showSettings={true} results={tableData}
-        columns={["Sym", "Desc", "Most Rec", "Chg" , "%Chg" , "Bid" , "Ask", "Vol", "MRT" , "Open", "High", "Low", "Prev", "Cap", "PTB", "P/E", "AVG VOL", "Short Interest" ]}/>
+      <div>
+        <Griddle results={tableData} showSettings={true} />
       </div>
     );
   }
 }
 
-const EnhancedComponent = Dimensions({elementResize: true})(FirstGriddle)
-
-export default EnhancedComponent;
+export default FirstGriddle;
