@@ -89,7 +89,7 @@ var FifthGirdLayout = React.createClass({
            <span className="remove" style={removeStyle}>x</span>
 
            <div>
-              <div className="holy-grail ">
+              <div className="holy-grail compact">
                 <div className="holy-grail__body">
                   <div className="holy-grail__content">
 
