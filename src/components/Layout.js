@@ -135,6 +135,9 @@ class Layout extends React.Component {
           <Link to="/griddle2"  className="nav-link">
             <MenuItem> Griddle Table </MenuItem>
           </Link>
+          <Link to="/largeGrid"  className="nav-link">
+            <MenuItem> Ag Grid </MenuItem>
+          </Link>
           <Divider />
 
 
@@ -173,7 +176,7 @@ class Layout extends React.Component {
             <MenuItem> Chart IQ (not working) </MenuItem>
           </Link>
 
-          
+
 
           <Divider />
           <h3>Scroll Containers</h3>
