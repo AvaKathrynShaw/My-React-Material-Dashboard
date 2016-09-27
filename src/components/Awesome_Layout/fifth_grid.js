@@ -9,7 +9,7 @@ import IconMenuExampleSimple from '../common/top-menu';
 import SpeedDeskDemo from '../news/demo'
 import AreaChart from '../recharts/area_chart'
 import { Scrollbars } from 'react-custom-scrollbars';
-import FirstGriddle from '../griddle/first_griddle'
+import FirstGriddle from '../griddle/second_griddle'
 
 import ResizeScrollBox from '../Scroll_Containers/resize_scrollbox'
 
@@ -45,7 +45,9 @@ var FifthGirdLayout = React.createClass({
      return {
        className: "layout",
        cols: {lg: 12, md: 10, sm: 6, xs: 4, xxs: 2},
-       rowHeight: 30
+       rowHeight: 30,
+       margin: [5, 5],
+       containerPadding: [0,0],
      };
    },
 

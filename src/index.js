@@ -33,6 +33,7 @@ import Quickstart from './components/chartIQ/react_components/quickstart'
 import FirstGriddle from './components/griddle/first_griddle'
 import SecondGriddle from './components/griddle/second_griddle'
 
+
 injectTapEventPlugin();
 
 ReactDOM.render(
@@ -68,7 +69,8 @@ const routes = {
     { path: 'scroll-container', component: ScrollContainer },
     { path: 'griddle1', component: FirstGriddle },
     { path: 'griddle2', component: SecondGriddle },
-    
+
+
 
 
 

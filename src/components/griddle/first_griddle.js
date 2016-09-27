@@ -965,7 +965,7 @@ const columnMeta = [
 },
 {
   "columnName": "Short Interest",
-  "order":  18,
+  "order":  1,
   "locked": false,
   "visible": true,
   "sortable": false

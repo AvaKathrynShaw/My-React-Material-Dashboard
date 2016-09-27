@@ -848,14 +848,22 @@ require('./demo.css');
     },
   ];
 
-class FirstGriddle extends React.Component {
+
+class SecondGriddle extends React.Component {
   render() {
+
+    const customRows = {
+      backgroundColor: "#ffde00",
+    }
+
     return (
-      <div>
-        <Griddle results={tableData} showSettings={true} />
+      <div className="griddle">
+        <Griddle tableClassName="table" results={tableData}
+        useGriddleStyles={false} showSettings={true}
+        rowMetadata={customRows} />
       </div>
     );
   }
 }
 
-export default FirstGriddle;
+export default SecondGriddle;

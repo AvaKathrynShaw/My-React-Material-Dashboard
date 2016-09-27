@@ -97,10 +97,13 @@
   font-size: 10px;
 }
 
-table.customGriddle td{
-  background-color: blue;
+.customRows{
+  font-size: 30px;
 }
 
-.customRows:nth-child(odd){
+.customRows:hover{
+  backround-color: blue;
+}
+.customRows:nth-of-type(odd){
   background-color: blue;
 }
