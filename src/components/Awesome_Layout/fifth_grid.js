@@ -9,9 +9,11 @@ import IconMenuExampleSimple from '../common/top-menu';
 import SpeedDeskDemo from '../news/demo'
 import AreaChart from '../recharts/area_chart'
 import { Scrollbars } from 'react-custom-scrollbars';
-import FirstGriddle from '../griddle/second_griddle'
-
+import FirstGriddle from '../griddle/second_griddle';
+import Quickstart from '../chartIQ/react_components/quickstart';
+import IconMenuExample2 from '../common/menu-button';
 import ResizeScrollBox from '../Scroll_Containers/resize_scrollbox'
+var FontAwesome = require('react-fontawesome');
 
 
 const originalLayouts = getFromLS('layouts') || {};
@@ -25,18 +27,23 @@ require('./flexbox.css');
  const removeStyle = {
    position: 'absolute',
    right: '20px',
-   top: 10,
+   top: 0,
    cursor: 'pointer',
    fontSize: '20px',
-   hover: 'orange'
+   hover: 'orange',
+
  };
+
  const removeStyle1 = {
    position: 'absolute',
    left: '40px',
-   padding: '5px',
+   padding: '0px',
    top: 0,
    cursor: 'pointer',
+
  };
+
+
 
 var FifthGirdLayout = React.createClass({
   mixins: [PureRenderMixin],
@@ -76,27 +83,26 @@ var FifthGirdLayout = React.createClass({
              {...this.props}
              layouts={this.state.layouts}
              onLayoutChange={this.onLayoutChange}
-             className='grid-layout compact'>
+             className='grid-layout'>
 
 
 
-           <div key="Quote Grid"
-           className='grid-layout bluebar compact'
+          <div key="Quote Grid"
+           className='grid-layout bluebar compactOverride'
            data-grid={{w: 2, h: 3, x: 0, y: 0}}>
 
 
-           <span className="text" style={removeStyle1}> <h4> Quote Grid </h4> </span>
 
-           <span> <IconMenuExampleSimple /> </span>
 
-           <span className="remove" style={removeStyle}>x</span>
+           <h6> Quote Grid </h6>
+           <div style={removeStyle}><IconMenuExampleSimple /></div>
 
-           <div>
-              <div className="holy-grail">
-                <div className="holy-grail__body">
-                  <div className="holy-grail__content">
+           <div className="compactOverride">
+              <div className="holy-grail compactOverride">
+                <div className="holy-grail__body compactOverride">
+                  <div className="holy-grail__content compactOverride">
                   <Scrollbars style={{ height: 600 }}>
-                  <section className="component__section ">
+                  <section className="component__section compactOverride">
 
                     <FirstGriddle />
 
@@ -106,13 +112,7 @@ var FifthGirdLayout = React.createClass({
                 </div>
              </div>
            </div>
-
-
-
-
-
-
-           </div>
+         </div>
 
 
            <div key="Speed Desk"
@@ -120,11 +120,8 @@ var FifthGirdLayout = React.createClass({
            data-grid={{w: 2, h: 3, x: 2, y: 0}}>
 
 
-           <span className="text" style={removeStyle1}> <h4> Speed Desk </h4> </span>
-
-           <span> <IconMenuExampleSimple /> </span>
-
-           <span className="remove" style={removeStyle}>x</span>
+           <h6> Speed Desk </h6>
+           <span style={removeStyle}><IconMenuExampleSimple /></span>
 
            <div>
               <div className="holy-grail">
@@ -154,11 +151,8 @@ var FifthGirdLayout = React.createClass({
 
 
 
-           <span className="text" style={removeStyle1}> <h4> Chart </h4> </span>
-
-           <span> <IconMenuExampleSimple /> </span>
-
-           <span className="remove" style={removeStyle}>x</span>
+           <h6> Chart </h6>
+           <span style={removeStyle}><IconMenuExampleSimple /></span>
 
            <div>
               <div className="holy-grail">
@@ -171,15 +165,12 @@ var FifthGirdLayout = React.createClass({
                   style={{ height: 600 }}>
                   <section className="component__section">
 
-                    <SimpleLineChart />
-                    <AreaChart />
+                    <Quickstart />
 
                   </section>
                   </Scrollbars>
 
-                  <div className="holy-grail__sidebar holy-grail__sidebar--left">
-                  <h4>Left Flexbox</h4>
-                  </div>
+
 
                   </div>
                 </div>
@@ -202,11 +193,8 @@ var FifthGirdLayout = React.createClass({
 
 
 
-           <span className="text" style={removeStyle1}> <h4> Ticker Comparison </h4> </span>
-
-           <span> <IconMenuExampleSimple /> </span>
-
-           <span className="remove" style={removeStyle}>x</span>
+           <h6> Ticker Comparison </h6>
+           <span style={removeStyle}><IconMenuExampleSimple /></span>
 
            <div>
               <div className="holy-grail">
@@ -215,7 +203,7 @@ var FifthGirdLayout = React.createClass({
 
                   <section className="component__section">
 
-                    <p>Content Here</p>
+                  Content here
 
                   </section>
 
@@ -240,11 +228,8 @@ var FifthGirdLayout = React.createClass({
            data-grid={{w: 2, h: 3, x: 8, y: 0}}>
 
 
-           <span className="text" style={removeStyle1}> <h4> Chat </h4> </span>
-
-           <span> <IconMenuExampleSimple /> </span>
-
-           <span className="remove" style={removeStyle}>x</span>
+           <h6> Chat </h6>
+           <span style={removeStyle}><IconMenuExampleSimple /></span>
 
            <div>
               <div className="holy-grail">
@@ -253,7 +238,7 @@ var FifthGirdLayout = React.createClass({
 
                   <section className="component__section">
 
-                    <p>Content Here</p>
+                    <FontAwesome name='rocket' />
 
                   </section>
 

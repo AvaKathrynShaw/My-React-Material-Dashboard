@@ -1,6 +1,8 @@
 
 import React from 'react';
 
+import Dimensions from 'react-dimensions'
+
 
 class Quickstart extends React.Component {
 
@@ -18,9 +20,9 @@ class Quickstart extends React.Component {
    {
 
      const Style = {
-       width:'800px',
-       height:'460px',
-       position:'relative'
+       height:this.props.containerWidth*(1/2),
+       position:'relative',
+       width:this.props.containerWidth
      }
 
 
@@ -31,5 +33,6 @@ class Quickstart extends React.Component {
     );
   }
 }
+const EnhancedComponent = Dimensions({elementResize: true})(Quickstart)
 
-export default Quickstart;
+export default EnhancedComponent;

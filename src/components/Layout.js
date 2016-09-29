@@ -173,7 +173,7 @@ class Layout extends React.Component {
           </Link>
 
           <Link to="/chartIQ"  className="nav-link">
-            <MenuItem> Chart IQ (not working) </MenuItem>
+            <MenuItem> Chart IQ </MenuItem>
           </Link>
 
 

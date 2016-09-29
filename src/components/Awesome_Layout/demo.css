@@ -70,8 +70,13 @@
 }
 
 .bluebar{
-  background-color: #484765;
+  background-color: #292B2F;
   color: #fff;
+
 }
 
-.material-icons.md-18 { font-size: 18px; }
+.small{
+  height: 25px !important;
+}
+
+.material-icons.md-18 { font-size: 10px !important; }

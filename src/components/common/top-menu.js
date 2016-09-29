@@ -4,15 +4,17 @@ import MenuItem from 'material-ui/MenuItem';
 import IconButton from 'material-ui/IconButton/IconButton';
 import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
 import {blue500, red500, greenA200, white, deepOrange300} from 'material-ui/styles/colors';
-
+var FontAwesome = require('react-fontawesome');
 require('./demo.css');
+
 
 const IconMenuExampleSimple = () => (
   <div>
     <IconMenu
-      iconButtonElement={<IconButton><MoreVertIcon color={white} className='material-icons.md-18' hoverColor={deepOrange300}/></IconButton>}
-      anchorOrigin={{horizontal: 'left', vertical: 'top'}}
-      targetOrigin={{horizontal: 'left', vertical: 'top'}}
+      iconButtonElement={
+        <FontAwesome name='ellipsis-v' />}
+      anchorOrigin={{horizontal: 'left', vertical: 'bottom'}}
+      targetOrigin={{horizontal: 'left', vertical: 'bottom'}}
     >
       <MenuItem primaryText="Refresh" />
       <MenuItem primaryText="Send feedback" />
