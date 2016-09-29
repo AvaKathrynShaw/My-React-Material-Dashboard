@@ -1,17 +1,32 @@
 
 import React from 'react';
 
+
 class Quickstart extends React.Component {
 
-  componentWillMount() {
-    displayChart();
-  }
+  componentDidMount() {
+
+    var stxx=new STXChart(this.chartContainer); // Declare a STXChart object. This is the main object for drawing charts.
+
+    stxx.newChart("SPY", sampleData);
+
+
+}
+
 
   render()
    {
+
+     const Style = {
+       width:'800px',
+       height:'460px',
+       position:'relative'
+     }
+
+
     return (
 
-      <div style="width:800px;height:460px;position:relative;"><div></div></div>
+      <div id="quickStart" className="chartContainer" style={Style} ref={(c)=>this.chartContainer=c}></div>
 
     );
   }
