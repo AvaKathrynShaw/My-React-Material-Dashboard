@@ -31,15 +31,18 @@ require('./flexbox.css');
    cursor: 'pointer',
    fontSize: '20px',
    hover: 'orange',
+   padding: '0px',
+   margin: '0px'
 
  };
 
  const removeStyle1 = {
    position: 'absolute',
    left: '40px',
-   padding: '0px',
    top: 0,
    cursor: 'pointer',
+   padding: '0px',
+   margin: '0px'
 
  };
 
@@ -78,6 +81,16 @@ var FifthGirdLayout = React.createClass({
      return (
        <div>
          <button onClick={this.resetLayout}>Reset Layout</button>
+
+       <hr style={{color:'white'}}/>
+       <div className='topBanner' style={{height:'50px'}}>
+
+        <FontAwesome name='bars'style={{color:'white', 'font-size':'25px', 'padding-left':'20px', 'padding-top':'10px', float:'left'}}></FontAwesome>
+        <img style={{height:'30px', 'margin':'7px', float: 'left'}} src="../../assets/search.png" />
+        <img style={{width:'50px', float:'right', 'margin-right':'10px', 'margin-top':'5px'}} src="../../assets/MoneyNet-Logo-Orange.png" />
+      </div>
+
+
          <ResponsiveReactGridLayout
              ref="rrgl"
              {...this.props}
@@ -160,18 +173,14 @@ var FifthGirdLayout = React.createClass({
                   <div className="holy-grail__content">
 
                   <Scrollbars
-
-
                   style={{ height: 600 }}>
                   <section className="component__section">
 
-                    <Quickstart />
+                    <Quickstart className="noDrag"/>
 
                   </section>
                   </Scrollbars>
 
-
-
                   </div>
                 </div>
              </div>
@@ -186,84 +195,51 @@ var FifthGirdLayout = React.createClass({
 
 
 
-           <div key="Ticker Comparison"
+           <div key="Risk Pulse"
            className='grid-layout container bluebar compact'
            data-grid={{w: 2, h: 3, x: 6, y: 0}}>
 
 
+                  <img className="noDrag" style={{width:'100%', height:'100%'}} src="../../assets/risk_pulse.png" />
 
-
-           <h6> Ticker Comparison </h6>
-           <span style={removeStyle}><IconMenuExampleSimple /></span>
-
-           <div>
-              <div className="holy-grail">
-                <div className="holy-grail__body">
-                  <div className="holy-grail__content">
-
-                  <section className="component__section">
-
-                  Content here
-
-                  </section>
-
-                  </div>
-                </div>
-             </div>
-           </div>
-
-
-
-
-
-
-
-            </div>
+        </div>
 
 
 
 
            <div key="Chat"
            className='grid-layout container bluebar compact'
-           data-grid={{w: 2, h: 3, x: 8, y: 0}}>
+           data-grid={{w: 2, h: 3, x: 8, y: 0}}
+           style={{margin:'0px', padding:'0px'}}>
 
 
            <h6> Chat </h6>
            <span style={removeStyle}><IconMenuExampleSimple /></span>
 
-           <div>
-              <div className="holy-grail">
-                <div className="holy-grail__body">
-                  <div className="holy-grail__content">
 
-                  <section className="component__section">
 
-                    <FontAwesome name='rocket' />
 
-                  </section>
+                  <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
 
-                  </div>
-                </div>
-             </div>
-           </div>
+                    <Scrollbars
+                    style={{ height: 400 }}>
+
+                    <img style={{width:'100%'}} src="../../assets/desktop_dark_chat.png" />
+
+                    </Scrollbars>
 
 
 
 
            </div>
-
-
-
-
-
-
+          </div>
          </ResponsiveReactGridLayout>
        </div>
      );
    }
  });
 
-
+//function to call from browser stored JSON file
  function getFromLS(key) {
    let ls = {};
    if (global.localStorage) {
@@ -276,7 +252,7 @@ var FifthGirdLayout = React.createClass({
 
 
 
-
+//function call to browser to save the new layout on
  function saveToLS(key, value) {
    if (global.localStorage) {
      global.localStorage.setItem('rgl-8', JSON.stringify({
