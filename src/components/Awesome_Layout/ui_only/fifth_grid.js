@@ -131,7 +131,7 @@ var FifthGirdLayout = React.createClass({
 
              <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
 
-               <img style={{width:'100%', height:'100%'}} src="../../assets/Newsfeed.png" />
+               <img style={{width:'100%', }} src="../../assets/Newsfeed.png" />
 
              </div>
 
@@ -150,29 +150,14 @@ var FifthGirdLayout = React.createClass({
            <h6> Chart </h6>
            <span style={removeStyle}><IconMenuExampleSimple /></span>
 
-           <div>
-              <div className="holy-grail">
-                <div className="holy-grail__body">
-                  <div className="holy-grail__content">
 
-                  <Scrollbars
-                  style={{ height: 600 }}>
+
+
                   <section className="component__section">
 
-                    <Quickstart className="noDrag"/>
+                    <Quickstart style={{height:'100%', width:'100%' }}/>
 
                   </section>
-                  </Scrollbars>
-
-                  </div>
-                </div>
-             </div>
-           </div>
-
-
-
-
-
 
             </div>
 
