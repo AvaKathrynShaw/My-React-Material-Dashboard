@@ -106,6 +106,9 @@ class Layout extends React.Component {
           <Link to="/grid5" className="nav-link">
             <MenuItem> Snap Grid 5 </MenuItem>
           </Link>
+          <Link to="/UIGrid"  className="nav-link">
+            <MenuItem> UI Layout </MenuItem>
+          </Link>
           <Link to="/cards" className="nav-link">
             <MenuItem> Cards </MenuItem>
           </Link>

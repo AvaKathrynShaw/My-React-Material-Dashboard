@@ -3,23 +3,23 @@ var PureRenderMixin = require('react/lib/ReactComponentWithPureRenderMixin');
 var WidthProvider = require('react-grid-layout').WidthProvider;
 var ResponsiveReactGridLayout = require('react-grid-layout').Responsive;
 ResponsiveReactGridLayout = WidthProvider(ResponsiveReactGridLayout);
-import SimpleLineChart from '../recharts/chart1';
-import SvgIconExampleSimple from '../common/SVGIcon';
-import IconMenuExampleSimple from '../common/top-menu';
-import SpeedDeskDemo from '../news/demo'
-import AreaChart from '../recharts/area_chart'
+import SimpleLineChart from '../../recharts/chart1';
+import SvgIconExampleSimple from '../../common/SVGIcon';
+import IconMenuExampleSimple from '../../common/top-menu';
+import SpeedDeskDemo from '../../news/demo'
+import AreaChart from '../../recharts/area_chart'
 import { Scrollbars } from 'react-custom-scrollbars';
-import FirstGriddle from '../griddle/second_griddle';
-import Quickstart from '../chartIQ/react_components/quickstart';
-import IconMenuExample2 from '../common/menu-button';
-import ResizeScrollBox from '../Scroll_Containers/resize_scrollbox'
+import FirstGriddle from '../../griddle/second_griddle';
+import Quickstart from '../../chartIQ/react_components/quickstart';
+import IconMenuExample2 from '../../common/menu-button';
+import ResizeScrollBox from '../../Scroll_Containers/resize_scrollbox'
 var FontAwesome = require('react-fontawesome');
 
 
 const originalLayouts = getFromLS('layouts') || {};
 
-require('./demo.css');
-require('./flexbox.css');
+require('../demo.css');
+require('../flexbox.css');
 
 /**
  * This layout demonstrates how to sync to localstorage.
@@ -110,21 +110,14 @@ var FifthGirdLayout = React.createClass({
            <h6> Quote Grid </h6>
            <div style={removeStyle}><IconMenuExampleSimple /></div>
 
-           <div className="compactOverride">
-              <div className="holy-grail compactOverride">
-                <div className="holy-grail__body compactOverride">
-                  <div className="holy-grail__content compactOverride">
-                  <Scrollbars style={{ height: 600 }}>
-                  <section className="component__section compactOverride">
+             <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
 
-                    <FirstGriddle />
 
-                  </section>
-                  </Scrollbars>
-                  </div>
-                </div>
+
+               <img style={{width:'100%', height:'100%'}} src="../../assets/quoteGrid.png" />
+
+
              </div>
-           </div>
          </div>
 
 
@@ -136,21 +129,11 @@ var FifthGirdLayout = React.createClass({
            <h6> Speed Desk </h6>
            <span style={removeStyle}><IconMenuExampleSimple /></span>
 
-           <div>
-              <div className="holy-grail">
-                <div className="holy-grail__body">
-                  <div className="holy-grail__content">
-                  <Scrollbars style={{ height: 300 }}>
-                  <section className="component__section">
+             <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
 
-                    <SpeedDeskDemo />
+               <img style={{width:'100%', height:'100%'}} src="../../assets/Newsfeed.png" />
 
-                  </section>
-                  </Scrollbars>
-                  </div>
-                </div>
              </div>
-           </div>
 
 
 
@@ -215,6 +198,10 @@ var FifthGirdLayout = React.createClass({
 
            <h6> Chat </h6>
            <span style={removeStyle}><IconMenuExampleSimple /></span>
+
+
+
+
                   <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
 
                     <Scrollbars
@@ -223,12 +210,10 @@ var FifthGirdLayout = React.createClass({
                     <img style={{width:'100%'}} src="../../assets/desktop_dark_chat.png" />
 
                     </Scrollbars>
-
-
-
-
            </div>
           </div>
+
+
          </ResponsiveReactGridLayout>
        </div>
      );
