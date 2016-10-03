@@ -8,9 +8,14 @@ class Quickstart extends React.Component {
 
   componentDidMount() {
 
-    var stxx1=new STXChart({container:$$$(".chartContainer1"),layout:{"chartType": "candle","candleWidth": 16}});
+  var stxx1=new STXChart({container:$$$(".chartContainer1"),layout:{"chartType": "candle","candleWidth": 16, "crosshair":true}});
   var stxx2=new STXChart({container:$$$(".chartContainer2"),layout:{"chartType": "line"}});
   var stxx3=new STXChart({container:$$$(".chartContainer3"),layout:{"chartType": "mountain"}});
+
+  stxx1.yaxisLabelStyle="roundRectArrow";
+  stxx1.chart.xAxis.displayGridLines=false;
+  stxx1.chart.allowScrollPast=true;
+  stxx1.chart.panel.yAxis.idealTickSizePixels=100;
 
   stxx1.newChart("SPY", sampleData);
   stxx2.newChart("IBM", sampleData);
@@ -29,11 +34,17 @@ class Quickstart extends React.Component {
      const Style = {
        height:'200px',
        position:'relative',
-       width:'100%'
+       width:'100%',
+       backgroundColor:'white',
+       color: 'purple'
      }
 
      const Style2={
        width:'100%'
+     }
+
+     const Style3={
+       display:'none'
      }
 
 
@@ -44,7 +55,7 @@ class Quickstart extends React.Component {
 
   <div className="stx-nav">
       <div className="stx-search">
-        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+        <input type="text" id="symbol" data-name="symbol" autoCapitalize="off" autoCorrect="on" data-spellcheck="off" className="stx-input-field" />
       </div>
     </div>
 
@@ -57,7 +68,7 @@ class Quickstart extends React.Component {
 
   <div className="stx-nav">
       <div className="stx-search">
-        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+        <input type="text" id="symbol" data-name="symbol" autoCapitalize="off" autoCorrect="on" data-spellcheck="off" className="stx-input-field" />
       </div>
     </div>
 
@@ -65,12 +76,11 @@ class Quickstart extends React.Component {
 
   <div className="stx-nav">
       <div className="stx-search">
-        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+        <input type="text" id="symbol" data-name="symbol" autoCapitalize="off" autoCorrect="on" data-spellcheck="off" className="stx-input-field" />
       </div>
     </div>
 
 <div className="chartContainer3" style={Style}></div>
-
 
 </div>
 

@@ -180,7 +180,11 @@ class Layout extends React.Component {
           </Link>
 
           <Link to="/ChartIQ2"  className="nav-link">
-            <MenuItem> Chart IQ </MenuItem>
+            <MenuItem> Chart IQ 2 </MenuItem>
+          </Link>
+
+          <Link to="/ChartIQ3"  className="nav-link">
+            <MenuItem> Chart IQ 3</MenuItem>
           </Link>
 
 
