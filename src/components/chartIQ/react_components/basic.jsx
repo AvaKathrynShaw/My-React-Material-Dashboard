@@ -6,60 +6,20 @@ import Dimensions from 'react-dimensions'
 
 class Quickstart extends React.Component {
 
-componentWillMount() {
-   console.log('Component WILL MOUNT!')
-}
+  componentDidMount() {
 
-componentDidMount() {
-   console.log('Component DID MOUNT!')
+    var stxx1=new STXChart({container:$$$(".chartContainer1"),layout:{"chartType": "candle","candleWidth": 16}});
+  var stxx2=new STXChart({container:$$$(".chartContainer2"),layout:{"chartType": "line"}});
+  var stxx3=new STXChart({container:$$$(".chartContainer3"),layout:{"chartType": "mountain"}});
 
-   var stxx = new STXChart({
-     container: $$$(".chartContainer"),layout:{"chartType": "mountain"}
- }); // Declare a STXChart object. This is the main object for drawing charts. // Declare a STXChart object. This is the main object for drawing charts.
+  stxx1.newChart("SPY", sampleData);
+  stxx2.newChart("IBM", sampleData);
+  stxx3.newChart("GE", sampleData);
 
- stxx.chart.yAxis.goldenRatioYAxis = true;
- stxx.chart.xAxis.axisType = "ntb";
+  console.log("Component did mount")
+  console.log(stxx1);
 
- stxx.newChart("SPY", sampleData);
 
- stxx.addSeries("Series-Name", {
- color: "green",
- data: getDataFromServer("someFieldIwantToAdd"),
- marginTop: 100, // give room for the legend
-});
-
-// This is just dummy code for streaming quotes (randomly generated to update the last tick)
-setInterval(function() {
- var newQuote = STX.clone(stxx.currentQuote());
- var sdata = newQuote["Series-Name"] + Math.round((Math.random() - .5) * 100) / 100;
- stxx.streamTrade({
-   last: sdata
- }, newQuote.DT.setDate(newQuote.DT.getDate() + 1), "Series-Name");
-}, 2000);
-}
-
-componentWillReceiveProps(newProps) {
-   console.log('Component WILL RECIEVE PROPS!')
-
-   // This is just dummy code for generating series data. In real life you'll want to get the actual
-   // data for the stock symbol. Create an array of {DT, Value}
-
-}
-
-shouldComponentUpdate(newProps, newState) {
-   return true;
-}
-
-componentWillUpdate(nextProps, nextState) {
-   console.log('Component WILL UPDATE!');
-}
-
-componentDidUpdate(prevProps, prevState) {
-   console.log('Component DID UPDATE!')
-}
-
-componentWillUnmount() {
-   console.log('Component WILL UNMOUNT!')
 }
 
 
@@ -67,36 +27,55 @@ componentWillUnmount() {
    {
 
      const Style = {
-       height:this.props.containerWidth*(1/2),
+       height:'200px',
        position:'relative',
-       width:this.props.containerWidth
+       width:'100%'
      }
 
-     function getDataFromServer(symbol) {
-      var newData = [];
-      newData[0] = {
-        DT: stxx.masterData[0].DT,
-        Value: stxx.masterData[0]["Close"]
-      };
-
-      dataSart = 2;
-      dataEnd = stxx.masterData.length;
-
-      for (var i = dataSart; i < dataEnd; i++) {
-        // For each series, use the stock symbol name as the field name
-        newData.push({
-          DT: stxx.masterData[i].DT,
-          Value: newData[newData.length - 1].Value + Math.round((Math.random() - .5) * 100) / 100
-        });
-      }
-
-      return newData;
+     const Style2={
+       width:'100%'
      }
+
 
 
     return (
+<div>
+<div className="stx-wrapper" style={Style2}>
 
-      <div id="quickStart" className="chartContainer" style={Style} ref={(c)=>this.chartContainer=c}></div>
+  <div className="stx-nav">
+      <div className="stx-search">
+        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+      </div>
+    </div>
+
+
+
+
+
+
+<div className="chartContainer1" style={Style}></div>
+
+  <div className="stx-nav">
+      <div className="stx-search">
+        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+      </div>
+    </div>
+
+<div className="chartContainer2" style={Style}></div>
+
+  <div className="stx-nav">
+      <div className="stx-search">
+        <input type="text" id="symbol" name="symbol" autocapitalize="off" autocorrect="off" spellcheck="off" className="stx-input-field" />
+      </div>
+    </div>
+
+<div className="chartContainer3" style={Style}></div>
+
+
+</div>
+
+</div>
+
 
     );
   }
