@@ -34,6 +34,7 @@ import FirstGriddle from './components/griddle/first_griddle'
 import SecondGriddle from './components/griddle/second_griddle'
 import LargeGrid from './components/ag-large/largeGrid';
 import UIGrid from './components/Awesome_Layout/ui_only/fifth_grid'
+import ChartIQ2 from './components/chartIQ/react_components/basic'
 
 
 injectTapEventPlugin();
@@ -73,6 +74,7 @@ const routes = {
     { path: 'griddle2', component: SecondGriddle },
     { path: 'largeGrid', component: LargeGrid },
     { path: 'UIGrid', component: UIGrid },
+    { path: 'ChartIQ2', component: ChartIQ2 },
 
 
   ]

@@ -179,6 +179,10 @@ class Layout extends React.Component {
             <MenuItem> Chart IQ </MenuItem>
           </Link>
 
+          <Link to="/ChartIQ2"  className="nav-link">
+            <MenuItem> Chart IQ </MenuItem>
+          </Link>
+
 
 
           <Divider />
