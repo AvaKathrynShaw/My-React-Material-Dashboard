@@ -118,7 +118,6 @@ class Layout extends React.Component {
           <Divider />
 
 
-
           <h3>Table Components</h3>
           <Link to="/table1"  className="nav-link">
             <MenuItem> ReactTable </MenuItem>
@@ -142,7 +141,6 @@ class Layout extends React.Component {
             <MenuItem> Ag Grid </MenuItem>
           </Link>
           <Divider />
-
 
 
           <h3>Speed Desk Components</h3>
@@ -187,8 +185,6 @@ class Layout extends React.Component {
             <MenuItem> Chart IQ 3</MenuItem>
           </Link>
 
-
-
           <Divider />
           <h3>Scroll Containers</h3>
 
@@ -197,7 +193,6 @@ class Layout extends React.Component {
           </Link>
 
         </Drawer>
-
 
         <div className="page-content">
           {this.props.children}

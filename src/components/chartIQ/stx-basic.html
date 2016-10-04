@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
-<!-- 
+<!--
 Sample file for ChartIQ HTML5 Charting Library
-Copyright 2012 by ChartIQ LLC 
+Copyright 2012 by ChartIQ LLC
 -->
 
 <head>
@@ -43,10 +43,10 @@ Copyright 2012 by ChartIQ LLC
             <li stxToggle="changePeriodicity(30)">30 Min</li>
           </ul>
         </div>
-        
+
         <!-- These are very basic sample menus. You may replace these with another menuing system. Just follow the same onClick convention
 		or provide proxy functions that call the same code-->
-        
+
         <div class="stx-menus stx-basic">
           <div class="stx-btn stx-menu-btn stxMenu">Chart<em></em>
             <ul id="chart-display" class="chart-display menuSelect menuOutline" style="display:none">
@@ -86,7 +86,7 @@ Copyright 2012 by ChartIQ LLC
         </div>
     </div>
     <!-- End Nav -->
-      
+
     <!-- Toolbar -->
     <div class="stx-toolbar" id="stx-toolbar">
         <div class="drawOptions">
@@ -132,7 +132,7 @@ Copyright 2012 by ChartIQ LLC
             </div>
           </div>
         </div>
-        
+
         <ul class="hu">
           <li><span class="huLabel">O: </span><span id="huOpen" class="huField"></span></li>
           <li><span class="huLabel">H: </span><span id="huHigh" class="huField"></span></li>
@@ -142,10 +142,10 @@ Copyright 2012 by ChartIQ LLC
         </ul>
     </div>
     <!-- End Toolbar -->
-    
+
     <!-- Dialog Container -->
-    <div class="stx-dialog-container"> 
-        
+    <div class="stx-dialog-container">
+
       <!-- Indicator Dialogs -->
         <!-- The studyDialog is a general purpose dialog for entering the parameters for studies. It may be customized so long
         as the id an class names remain the same. Note that it contains templates which are replicated dynamically -->
@@ -168,7 +168,7 @@ Copyright 2012 by ChartIQ LLC
           <div id="parameters"></div>
           <div onClick="createStudy();STX.DialogManager.dismissDialog()" class="stx-btn">Create</div>
         </div>
-        
+
         <div id="studyOverZones" style="display:none">Show Zones
           <input id="studyOverZonesEnabled" type="checkbox" class="stx-input-check">
           <div class="outputTemplate">
@@ -186,7 +186,7 @@ Copyright 2012 by ChartIQ LLC
             </div>
           </div>
         </div>
-        
+
 
         <!-- Theme Dialog -->
           <div id="themeDialog" style="display:none" class="stx-dialog">
@@ -259,18 +259,18 @@ Copyright 2012 by ChartIQ LLC
 			<input type="text" id="themeName" name="themeName" autocapitalize="off" autocorrect="off" spellcheck="off" value="My Theme" class="stx-input-field">
             <div onClick="STX.ThemeManager.saveTheme($$('themeName').value, stxx);STX.DialogManager.dismissDialog()" class="stx-btn">Save Theme</div>
           </div>
-          
+
     </div>
 	<!-- End Dialog Container -->
 
-    <div class="chartContainer">  <!-- This is the container for the chart itself. This div will be passed in to the STXChart object. You may place this anywhere on your page. -->		      
+    <div class="chartContainer">  <!-- This is the container for the chart itself. This div will be passed in to the STXChart object. You may place this anywhere on your page. -->
     </div>
 </div>
 
 <script src="js/stxThirdParty.js"></script><!-- W3C intl support. Use this until browsers have internal support for ECMA-402. Not compatible with IE8 -->
 <script src="js/stx.js"></script>
-<script src="js/stxKernelOs.js"></script> 
-<script src="js/stxLibrary.js"></script> 
+<script src="js/stxKernelOs.js"></script>
+<script src="js/stxLibrary.js"></script>
 <script src="js/translations.js"></script>
 <script>
 
@@ -331,7 +331,7 @@ function runSampleUI(){
 
 	stxx.toolbar=new STX.DrawingToolbar($$$(".stx-wrapper .stx-toolbar"), stxx);
 
-	
+
 	function textCallback(that, txt, filter, clicked){
 		if(clicked){
 			$$$("#symbol").value="";
@@ -351,7 +351,7 @@ function runSampleUI(){
 	 	{symbol:"^EURUSD",description:"Euro US Dollar", exchange:"FX"}
 	 	];
 		that.displayResults(sampleResults); // Display the results in the drop down
-		
+
 		/*
 		// this is sample code for enabling suggestive search using an ajax query
 		// have your server return a JSON object in the format of sampleResults above
@@ -366,11 +366,11 @@ function runSampleUI(){
 		STX.postAjax(url, null, processSearchResults(that));
 		*/
 	}
-	
+
 	function selectCallback(that, symbol, filter){
     	if(symbol) stxx.newChart(symbol);
 	}
-	
+
 	var config={
 		input: $$$("#symbol"),
 		textCallback: textCallback,			// If you don't have a symbol lookup then just leave this blank
@@ -380,7 +380,7 @@ function runSampleUI(){
 	};
 	var stxLookupWidget=new STX.LookupWidget(config);
 	stxLookupWidget.init();
-	
+
 }
 
 function createStudy(){
@@ -400,7 +400,7 @@ function studyDialog(obj, study){
 function prependHeadsUpHR(){
 	var tick=Math.floor((STXChart.crosshairX-this.left)/this.layout.candleWidth);
 	var prices=this.chart.xaxis[tick];
-	
+
 	$$("huOpen").innerHTML="";
 	$$("huClose").innerHTML="";
 	$$("huHigh").innerHTML="";
@@ -451,7 +451,7 @@ function resizeContainers(){
       panelWidth+=openPanel.offsetWidth;
     }
     if(panelWidth===0) panelWidth=2;
-	
+
     chartContainer.style.width=(chartArea.offsetWidth-panelWidth)+"px";
     var bottomMargin=2;
     if($$$(".stx-footer")) bottomMargin=$$$(".stx-footer").offsetHeight;
@@ -480,9 +480,3 @@ resizeScreen();
 </script>
 </body>
 </html>
-
-
-
-
-
-
