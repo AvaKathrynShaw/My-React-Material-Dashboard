@@ -36,6 +36,11 @@ import LargeGrid from './components/ag-large/largeGrid';
 import UIGrid from './components/Awesome_Layout/ui_only/fifth_grid'
 import ChartIQ2 from './components/chartIQ/react_components/basic'
 import AjaxChart from './components/chartIQ/react_components/IQ_ajx'
+import ChartIQ3 from './components/chartIQ/react_components/basic-refactor'
+
+
+
+
 
 injectTapEventPlugin();
 
@@ -75,7 +80,8 @@ const routes = {
     { path: 'largeGrid', component: LargeGrid },
     { path: 'UIGrid', component: UIGrid },
     { path: 'ChartIQ2', component: ChartIQ2 },
-    { path: 'ChartIQ3', component: AjaxChart },
+    { path: 'ChartIQ4', component: AjaxChart },
+    { path: 'ChartIQ3', component: ChartIQ3 },
 
 
   ]

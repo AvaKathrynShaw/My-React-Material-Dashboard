@@ -90,7 +90,6 @@ var FifthGirdLayout = React.createClass({
         <img style={{width:'50px', float:'right', 'margin-right':'10px', 'margin-top':'5px'}} src="../../assets/MoneyNet-Logo-Orange.png" />
       </div>
 
-
          <ResponsiveReactGridLayout
              ref="rrgl"
              {...this.props}
@@ -98,28 +97,17 @@ var FifthGirdLayout = React.createClass({
              onLayoutChange={this.onLayoutChange}
              className='grid-layout'>
 
-
-
           <div key="Quote Grid"
            className='grid-layout bluebar compactOverride'
            data-grid={{w: 2, h: 3, x: 0, y: 0}}>
-
-
-
 
            <h6> Quote Grid </h6>
            <div style={removeStyle}><IconMenuExampleSimple /></div>
 
              <div className="holy-grail__content" style={{margin:'0px', padding:'0px'}}>
-
-
-
                <img style={{width:'100%', height:'100%'}} src="../../assets/quoteGrid.png" />
-
-
              </div>
          </div>
-
 
            <div key="Speed Desk"
            className='grid-layout container bluebar compact'
@@ -134,46 +122,29 @@ var FifthGirdLayout = React.createClass({
                <img style={{width:'100%', }} src="../../assets/Newsfeed.png" />
 
              </div>
-
-
-
            </div>
-
-
 
            <div key="Chart"
            className='grid-layout container bluebar compact'
            data-grid={{w: 5, h: 10, x: 4, y: 0}}>
 
-
-
            <h6> Chart </h6>
            <span style={removeStyle}><IconMenuExampleSimple /></span>
-
-
-
 
                   <section className="component__section">
 
                     <Quickstart style={{height:'100%', width:'100%' }}/>
 
                   </section>
-
             </div>
-
-
 
            <div key="Risk Pulse"
            className='grid-layout container bluebar compact'
            data-grid={{w: 2, h: 3, x: 6, y: 0}}>
 
-
                   <img className="noDrag" style={{width:'100%', height:'100%'}} src="../../assets/risk_pulse.png" />
 
         </div>
-
-
-
 
            <div key="Chat"
            className='grid-layout container bluebar compact'
